@@ -1,24 +1,5 @@
 function [x,Dr]=MetodoGaussSeidel(A,b,x0,kmax,tau);
 
-#
-# Metodo de Gauss-Seidel para resolucao de um sistema linear Ax = b,
-# em que A eh uma matriz nao singular com diagonal nao-nula.
-#
-# Comando:
-# [x,Dr]=MetodoGaussSeidel(A,b,x0);
-#
-# em que as entradas sao: 
-#   A - matriz nxn. 
-#   b - termo do lado direito. 
-#   x0 - aproximacao inicial (default x0=zeros).
-#   kmax - numero maximo de iteracoes (default kmax=100).
-#   tau - tolerancia (default tau=1.e-6). 
-#
-# e as saidas sao:
-#   x - aproximacao para solucao.
-#   Dr - vetor contendo os erros relativos por iteracao.
-#
-
 # Definia x0 = [0;0;...;0] se nao for apresentada uma aproximacao inicial.
 
 
@@ -43,13 +24,13 @@ L = tril(A);
 U = A-L;
 
 # Inicialize;
-k = 1; 	# Não é permitido índice 0 para vetores! 
+k = 1; 	# NÃ£o Ã© permitido Ã­ndice 0 para vetores! 
 Dr(k) = tau+1;
 while (k<=kmax)&(Dr(k)>tau)
   interacao="interacao";
   ktxt=mat2str(k);
   puts(ktxt);
-  puts(" Intera��o ");
+  puts(" Interação ");
   k = k+1;
   x = L\(b-U*x0);
    puts(" ");
