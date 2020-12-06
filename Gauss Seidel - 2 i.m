@@ -24,7 +24,7 @@ L = tril(A);
 U = A-L;
 
 # Inicialize;
-k = 1; 	# NÃ£o Ã© permitido Ã­ndice 0 para vetores! 
+k = 1; 	# não é permitido indice 0 para vetores! 
 Dr(k) = tau+1;
 while (k<=kmax)&(Dr(k)>tau)
   interacao="interacao";
