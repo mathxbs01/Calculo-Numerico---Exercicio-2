@@ -11,9 +11,9 @@ x0 = [0 ; 0; 0; 0]
 
 KMAX = 100000;
 
-EPSILON = 0.05;
+EPSILON = 0.875;
 
-#######INICIALIZA«√O#######
+#######INICIALIZA√á√ÉO#######
 
 K = 1;
 
